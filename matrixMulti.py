@@ -5,12 +5,7 @@ def multiply(matrix1, matrix2):
         print("The number of columns in first matrix is not equal to number of rows in second matrix")
         return
     
-    result = np.zeros((matrix1.shape[0], matrix2.shape[1])) # creating an empty matrix with the num of rows of matrix 1 and num of columns of matrix 2
-    for rows in range(0, result.shape[0]):
-        for cols in range(0, result.shape[1]):
-            result[rows, cols] = np.sum(matrix1[rows, :] * matrix2[:, cols])
-    
-    return result
+    return np.dot(matrix1, matrix2)
 
 
 m1 = np.array([[1, 2, 6], 
